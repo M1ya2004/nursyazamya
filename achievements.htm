@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Nursyaza Amira | Achievements </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+
+    .home-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #ff69b4;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .home-button a {
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .home-button:hover {
+      background-color: #ff3385;
+    }
+
+    .back-to-mainpage {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #ff69b4;
+      color: white;
+      padding: 12px 14px;
+      border-radius: 50%;
+      font-size: 18px;
+      text-align: center;
+      z-index: 1000;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transition: background 0.3s ease;
+    }
+
+    .back-to-mainpage:hover {
+      background-color: #ff85c1;
+      text-decoration: none;
+    }
+        
+    /* Basic Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Times New Roman, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: white;
+            background-color: #e5dcd1;
+            padding-top: 60px;
+            animation: fadeIn 5s ease-in;
+            height: 200vh;
+    }
+ 
+         @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+         }
+        
+        .container {
+            width: 80%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #fff6eb;
+            color: black;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 20px;
+        }
+        
+        .nav-links a {
+            color: black;
+            text-decoration: none;
+        }
+        
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        
+        section {
+            padding: 40px 0;
+        }
+        
+        h1 {
+                  text-align: center;
+      color: #d63384;
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+        
+        p {
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: #ffd3e3;
+            color: black;
+            text-align: center;
+            padding: 50px 0;
+            margin-top: 0px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .container {
+                width: 90%;
+            }
+        }
+        
+        .content {
+           position: center;
+           z-index: 1;
+           color: white;
+           text-align: center;
+           padding-top; 20%;
+           font-size: 400%;
+           text-shadow: 2px 2px 4px #000;
+        }
+
+
+        .slideshow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .slideshow div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            animation: fade 30s infinite;
+         }
+        
+         .slideshow div::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height:100%;
+            background-color: rgba(0,0,0,0.3);
+            top: 0;
+            left: 0;
+          }
+
+         .slideshow div:nth-child(1) {
+            background-image: url("1.jpg");
+            animation-delay: 0s;
+         }
+
+        .slideshow div:nth-child(2) {
+            background-image: url("2.jpg");
+            animation-delay: 10s;
+         }
+        
+         .slideshow div:nth-child(3) {
+            background-image: url("3.jpg");
+            animation-delay: 20s;
+         }        
+         
+         .slideshow div:nth-child(4) {
+            background-image: url("4.jpg");
+            animation-delay: 30s;
+         }
+        .slideshow div:nth-child(5) {
+            background-image: url("5.jpg");
+            animation-delay: 0s;
+         }
+
+         @keyframes fade {
+            0% { opacity: 0; }
+            10% { opacity: 0.5; }
+            30% { opacity: 0.5; }
+            40% { opacity: 0; }
+            100% { opacity: 0; }
+         }
+
+    /* SLIDESHOW */
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      height: 500px;
+      overflow: hidden;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.7;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    /* TEXT AT CENTER OF SLIDE */
+    .text-overlay {
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 6px black;
+    }
+
+    .text-overlay h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .text-overlay p {
+      font-size: 18px;
+    }
+
+   /--Achievements--/
+   .achievement-section {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      max-width: 300px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .achievement-card {
+
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(255, 105, 180, 0.2);
+      padding: 25px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      transition: transform 0.3s ease;
+    }
+
+    .achievement-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .achievement-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 15px;
+      flex-shrink: 0;
+    }
+
+    .achievement-content {
+      align-items: center;
+    }
+
+    .achievement-title {
+      font-size: 25px;
+      font-weight: bold;
+      color: #740606;
+      margin-bottom: 5px;
+    }
+
+    .achievement-level {
+      font-size: 20px;
+      font-weight: 600;
+      color: #ad5555;
+      margin-bottom: 10px;
+    }
+
+    .achievement-description {
+      font-size: 15px;
+      color: #000000;
+      line-height: 1.6;
+    }
+
+
+    </style>
+</head>
+<body>
+
+      <!-- Button section -->
+      <a href="#" class="back-to-mainpage" title="Back to mainpage">
+      <i class="fas fa-arrow-up"></i>
+      </a>
+    
+    <div class="slideshow">
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">NURSYAZA AMIRA</div>
+            <ul class=nav-links>
+		<li><a href="about.htm" target="_blank">About</a></li>
+                <li><a href="familyBackground.htm" target="_blank">Family Background</a></li>
+                <li><a href="skills.htm" target"_blank">Skills</a></li>
+                <li><a href="hobby.htm" target"_blank">Hobby</a></li>
+                <li><a href="achievements.htm" target">Achievements </a></li>
+                <li><a href="aboutNursyaza.htm" target"_blank">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Slideshow Section -->
+    <div class="slideshow-container">
+    <div class="slide active">
+      <img src="21.jpg" alt="Family 1">
+    </div>
+    <div class="slide">
+      <img src="22.jpg" alt="Family 2">
+    </div>
+    <div class="slide">
+      <img src="23.jpg" alt="Family 3">
+    </div>
+    <div class="slide">
+      <img src="24.jpg" alt="Family 4">
+    </div>
+
+    <div class="text-overlay">
+      <h1>Syaza's Achievements</h1>
+      <p>These are some of the key achievements I’ve made throughout my whole life.</p>
+    </div>
+  </div>
+
+  <!-- SLIDESHOW JAVASCRIPT -->
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlides() {
+      slides.forEach(slide => slide.classList.remove("active"));
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].classList.add("active");
+    }
+
+    setInterval(showSlides, 4000); 
+  </script>
+
+    <!-- Achievements Section -->
+  <div class="achievement-section">
+
+    <div class="achievement-card">
+      <img src="k.jpg" alt="Kem Pandu Puteri">
+      <div class="achievement-content">
+        <div class="achievement-title">Kem Kecekapan Pandu Puteri</div>
+        <div class="achievement-level">District Level</div>
+        <div class="achievement-description">
+          Developing leadership skills and teamwork among participants. Collaborated with peers to organize events and foster a supportive environment.
+        </div>
+      </div>
+    </div>
+
+    <div class="achievement-card">
+      <img src="l.jpg" alt="Bahasa Inggeris">
+      <div class="achievement-content">
+        <div class="achievement-title">Karnival Perpaduan Bahasa Inggeris</div>
+        <div class="achievement-level">National Level (2017 - 2021)</div>
+        <div class="achievement-description">
+          Promoting English language proficiency and cultural unity. 
+          Collaborated with diverse participants, and enhanced communication abilities while promoting a love for the English language.
+        </div>
+      </div>
+    </div>
+
+    <div class="achievement-card">
+      <img src="m.jpg" alt="INOSEP">
+      <div class="achievement-content">
+        <div class="achievement-title">KVSEP Invention and Innovation Competition (INOSEP)</div>
+        <div class="achievement-level">Institutional Level</div>
+        <div class="achievement-description">
+          Collaborated with a team to develop and present a unique solution, enhancing my problem-solving skills and creativity.
+        </div>
+      </div>
+    </div>
+
+    <div class="achievement-card">
+      <img src="n.jpg" alt="Top Student">
+      <div class="achievement-content">
+        <div class="achievement-title">Top Student Award</div>
+        <div class="achievement-level">College Vocational Seberang Perai</div>
+        <div class="achievement-description">
+          Achieved recognition as the top student for outstanding academic performance and dedication to excellence among all students.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+    <!-- Footer -->
+    <footer>
+        <div style="text-align: center; font-size:100%; color:#000000;">
+        <p>&copy; 2025 Nursyaza Amira binti Ahmad Ghazali. All Rights Reserved.</p>
+    </footer>
+
+  <button class="home-button">
+    <a href="aboutNursyaza.htm"><i class="fas fa-home"></i></a>
+  </button>
+   
+</body>
+</html>

@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Nursyaza Amira | Skills </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+
+    .home-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #ff69b4;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .home-button a {
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .home-button:hover {
+      background-color: #ff3385;
+    }
+
+
+    .back-to-mainpage {
+      	position: fixed;
+      	bottom: 25px;
+      	right: 25px;
+      	background-color: #ff69b4;
+      	color: white;
+      	padding: 12px 14px;
+      	border-radius: 50%;
+      	font-size: 18px;
+      	text-align: center;
+      	z-index: 1000;
+      	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      	transition: background 0.3s ease;
+      }
+
+      .back-to-mainpage:hover {
+      	background-color: #ff85c1;
+      	text-decoration: none;
+       }
+        
+        /* Basic Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Times New Roman, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #fefefe;
+            background-color: #e5dcd1;
+            padding-top: 60px;
+            animation: fadeIn 5s ease-in;
+        }
+ 
+         @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+         }
+        
+        .container {
+            width: 80%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+         }
+        
+        header {
+            background-color: #fff6eb;
+            color: black;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 20px;
+        }
+        
+        .nav-links a {
+            color: black;
+            text-decoration: none;
+        }
+        
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        
+        section {
+            padding: 40px 0;
+        }
+        
+        h1, h2 {
+            margin-bottom: 15px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        
+        footer {
+            background-color: #ffd3e3;
+            color: black;
+            text-align: center;
+            padding: 50px 0;
+            margin-top: 0px auto;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .container {
+                width: 90%;
+            }
+        }
+        
+        .content {
+           position: center;
+           z-index: 1;
+           color: white;
+           text-align: center;
+           padding-top; 20%;
+           font-size: 200%;
+           text-shadow: 2px 2px 4px #000;
+        }
+
+
+        .slideshow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .slideshow div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            animation: fade 30s infinite;
+         }
+        
+         .slideshow div::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height:100%;
+            background-color: rgba(0,0,0,0.3);
+            top: 0;
+            left: 0;
+          }
+
+         .slideshow div:nth-child(1) {
+            background-image: url("1.jpg");
+            animation-delay: 0s;
+         }
+
+        .slideshow div:nth-child(2) {
+            background-image: url("2.jpg");
+            animation-delay: 10s;
+         }
+        
+         .slideshow div:nth-child(3) {
+            background-image: url("3.jpg");
+            animation-delay: 20s;
+         }        
+         
+         .slideshow div:nth-child(4) {
+            background-image: url("4.jpg");
+            animation-delay: 30s;
+         }
+        .slideshow div:nth-child(5) {
+            background-image: url("5.jpg");
+            animation-delay: 0s;
+         }
+
+         @keyframes fade {
+            0% { opacity: 0; }
+            10% { opacity: 0.5; }
+            30% { opacity: 0.5; }
+            40% { opacity: 0; }
+            100% { opacity: 0; }
+         }
+ 
+         .skills-section {
+      	    max-width: 100%;
+            overflow-x: hidden;
+            margin: 30px 0;
+          }
+
+    	.skills-track {
+      	    display: inline-flex;
+            gap: 15px;
+            white-space: nowrap;
+            animation: slideLeft 25s linear infinite;
+        }
+
+        .skills-track.reverse {
+            animation: slideRight 25s linear infinite;
+        }
+
+        @keyframes slideLeft {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-100%); }
+        }
+
+    	@keyframes slideRight {
+      	    0% { transform: translateX(0); }
+            100% { transform: translateX(100%); }
+    	}
+
+    	.skill-badge {
+      	    display: inline-flex;
+            align-items: center;
+      	    padding: 8px 14px;
+      	    background: #222;
+      	    border-radius: 30px;
+      	    color: white;
+      	    font-size: 14px;
+       	    border: 1px solid #444;
+ 	    white-space: nowrap;
+	    transition: transform 0.3s ease;
+    	}
+
+    	.skill-badge i {
+            margin-right: 8px;
+            font-size: 35px;
+         }
+
+	.section {
+      		display: flex;
+      		align-items: center;
+      		justify-content: space-between;
+      		flex-wrap: wrap;
+      		gap: 40px;
+    	 }
+
+    .image-content {
+      flex: 1;
+      text-align: center;
+    }
+
+    .image-content video {
+      width: 300%;
+      max-width: 400px;
+      border-radius: 20px;
+      border: 6px solid #ffcce6;
+      box-shadow: 0 0 30px rgba(255, 192, 203, 0.5);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .image-content video:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 50px rgba(255, 182, 193, 0.7);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .image-content img {
+        margin-top: 50px;
+      }
+    }
+
+    </style>
+</head>
+<body>
+
+      <!-- Button section -->
+      <a href="#" class="back-to-mainpage" title="Back to mainpage">
+      <i class="fas fa-arrow-up"></i>
+      </a>
+    
+    <div class="slideshow">
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">NURSYAZA AMIRA</div>
+            <ul class=nav-links>
+		<li><a href="about.htm" target="_blank">About</a></li>
+                <li><a href="familyBackground.htm" target="_blank">Family Background</a></li>
+                <li><a href="skills.htm" target"_blank">Skills</a></li>
+                <li><a href="hobby.htm" target"_blank">Hobby</a></li>
+                <li><a href="achievements.htm" target"_blank">Achievements </a></li>
+                <li><a href="aboutNursyaza.htm" target"_blank">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+    <div class="container">
+      <h1>This is Syaza's Skills</h1>
+      <p style="font-size:70%; color:#fcfafb;">These skills are essential in supporting daily tasks and improving overall productivity.
+        They include both technical and communication abilities relevant to the working environment.
+        Such skills help enhance time management, teamwork, and problem-solving capabilities.
+        Additionally, they contribute to efficiency in using office software and digital tools.</p>
+    </div>
+    </div>
+
+
+    <div class="section">
+
+    <div class="image-content">
+      <video autoplay loop muted playsinline>
+        <source src="skills.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+        <video autoplay loop muted playsinline>
+        <source src="skills2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+	<h2 style="font-size:200%; color:#000000;">Types of Skills</h2>
+            <div style="font-size:100%; color:#000000;">
+            <div class="skills-section">
+            <div class="skills-track">
+                <div class="skill-badge"><i class="fas fa-file-word"></i> Word</div>
+                <div class="skill-badge"><i class="fas fa-file-powerpoint"></i> PowerPoint</div>
+                <div class="skill-badge"><i class="fas fa-file-excel"></i> Excel</div>
+                <div class="skill-badge"><i class="fas fa-laptop-code"></i> Basic Programming</div>
+                <div class="skill-badge"><i class="fas fa-server"></i> Operating Systems</div>
+                <div class="skill-badge"><i class="fas fa-network-wired"></i> Server Setup</div>
+                </div>
+            </div>
+            <div class="skills-section">
+              <div class="skills-track reverse">
+      <div class="skill-badge"><i class="fas fa-microchip"></i> Hardware Configuration</div>
+      <div class="skill-badge"><i class="fas fa-cogs"></i> Software Applications</div>
+      <div class="skill-badge"><i class="fas fa-wifi"></i> Networking Fundamentals</div>
+      <div class="skill-badge"><i class="fas fa-clock"></i> Time Management</div>
+      <div class="skill-badge"><i class="fas fa-user-check"></i> Hardworking</div>
+      <div class="skill-badge"><i class="fas fa-language"></i> Malay (Expert)</div>
+      <div class="skill-badge"><i class="fas fa-language"></i> English (Intermediate)</div>
+    </div>
+  </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div style="text-align: center; font-size:100%; color:#000000;">
+        <p>&copy; 2025 Nursyaza Amira binti Ahmad Ghazali. All Rights Reserved.</p>
+    	</div>
+    </footer>
+
+  <button class="home-button">
+    <a href="aboutNursyaza.htm"><i class="fas fa-home"></i></a>
+  </button> 
+
+</body>
+</html>

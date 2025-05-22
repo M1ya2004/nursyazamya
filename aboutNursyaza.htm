@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nursyaza Amira | Websites </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+
+    .cute-button {
+       display: inline-block;
+       background-color: #f9c9d2;
+       color: #fff;
+       padding: 0.75rem 1.5rem;
+       border-radius: 50px;
+       text-decoration: none;
+       font-weight: bold;
+       box-shadow: 0 4px 10px rgba(249, 201, 210, 0.6);
+       transition: background-color 0.3s, transform 0.2s;
+     } 
+
+     .cute-button:hover {
+       background-color: #f77da8;
+       transform: scale(1.05);
+     }   
+
+
+	.back-to-mainpage {
+           position: fixed;
+           bottom: 20px;
+           right: 20px;
+           background-color: #ff69b4;
+           color: white;
+           padding: 12px 14px;
+           border-radius: 100%;
+           font-size: 18px;
+           text-align: center;
+           z-index: 1000;
+           box-shadow: 0 0 10px rgba(0,0,0,0.3);
+           transition: background 0.3s ease;
+    	}
+
+    	.back-to-mainpage:hover {
+            background-color: #ff85c1;
+            text-decoration: none;
+	}
+        
+        /* Basic Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Times New Roman, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #fefefe;
+            background-color: #e5dcd1;
+            padding-top: 60px;
+            animation: fadeIn 5s ease-in;
+        }
+ 
+         @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+         }
+
+         .hero {
+             display: flex;
+             flex-direction: row;
+             justify-content: space-between;
+             align-items: center;
+             padding: 50px;
+             height: 100vh;
+          }
+
+           .hero-content {
+              max-width: 50%;
+          }
+
+	.highlight {
+           color: #c50b5d;
+    	}
+
+    	.typewriter {
+           font-size: 2.5em;
+           border-right: 2px solid #ff69b4;
+           white-space: nowrap;
+           overflow: hidden;
+           width: 0;
+           animation: typing 4s steps(40, end) forwards, blink 0.75s step-end infinite;
+    	}
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 200% }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+
+    .social-icons a {
+      font-size: 1.8em;
+      color: #c50b5d;
+      margin-right: 20px;
+      transition: transform 0.3s;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+    }
+
+	.profile-pic img {
+           width: 300px;
+           height: 400px;
+           object-fit: cover;
+           border-radius: 50% / 40%;
+           border: 5px solid #ffb6c1;
+           box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+    	}
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-content {
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+      .profile-pic img {
+        width: 250px;
+        height: 320px;
+      }
+    }
+        
+        .container {
+            width: 80%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #fff6eb;
+            color: black;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 20px;
+        }
+        
+        .nav-links a {
+            color: black;
+            text-decoration: none;
+        }
+        
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        
+        section {
+            padding: 40px 0;
+        }
+        
+        h1, h2, h3 {
+            margin-bottom: 15px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: black;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 3px;
+            margin-top: 10px;
+        }
+        
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .hobby-list, .achievements-list {
+            background-color: #d3b798;
+            padding: 20px;
+            margin-bottom: 0px;
+            border-radius: 5px;
+        }
+        
+         .hobby-list li {
+            margin-bottom: 0px;
+            list-style-position: inside;
+        }
+        
+        .achievements {
+            margin-bottom: 0px;
+        }
+        
+        .ahievements h3 {
+            color: #3498db;
+        }
+        
+        .contact-info {
+            background-color: #d39f98;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 0px;
+        }
+        
+        footer {
+            background-color: #ffd3e3;
+            color: black;
+            text-align: center;
+            padding: 50px 0;
+            margin-top: 0px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .container {
+                width: 90%;
+            }
+        }
+        
+        .content {
+           position: center;
+           z-index: 1;
+           color: white;
+           text-align: center;
+           padding-top; 20%;
+           font-size: 400%;
+           text-shadow: 2px 2px 4px #000;
+        }
+
+
+        .slideshow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .slideshow div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            animation: fade 30s infinite;
+         }
+        
+         .slideshow div::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height:100%;
+            background-color: rgba(0,0,0,0.3);
+            top: 0;
+            left: 0;
+          }
+
+         .slideshow div:nth-child(1) {
+            background-image: url("1.jpg");
+            animation-delay: 0s;
+         }
+
+        .slideshow div:nth-child(2) {
+            background-image: url("2.jpg");
+            animation-delay: 10s;
+         }
+        
+         .slideshow div:nth-child(3) {
+            background-image: url("3.jpg");
+            animation-delay: 20s;
+         }        
+         
+         .slideshow div:nth-child(4) {
+            background-image: url("4.jpg");
+            animation-delay: 30s;
+         }
+        .slideshow div:nth-child(5) {
+            background-image: url("5.jpg");
+            animation-delay: 0s;
+         }
+
+         @keyframes fade {
+            0% { opacity: 0; }
+            10% { opacity: 0.5; }
+            30% { opacity: 0.5; }
+            40% { opacity: 0; }
+            100% { opacity: 0; }
+         }
+
+	<!--Choose section-->
+    	h1 {
+      	   font-size: 48px;
+           font-weight: 700;
+           text-align: center;
+           margin-bottom: 20px;
+    	}
+
+ 	.subtext {
+           font-size: 20px;
+           color: #9b0c0c;
+           text-align: center;
+           margin-bottom: 40px;
+    	}
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      height: 220px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .card h2 {
+      z-index: 2;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .card a {
+      position: absolute;
+      bottom: 15px;
+      left: 15px;
+      background: rgba(255, 255, 255, 0.8);
+      color: #333;
+      padding: 8px 18px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      z-index: 2;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 1;
+    }
+
+    /* Background images */
+    .bg1 { background: url('13.jpg') center/cover no-repeat; }
+    .bg2 { background: url('9.jpg') center/cover no-repeat; }
+    .bg3 { background: url('10.jpg') center/cover no-repeat; }
+    .bg4 { background: url('11.jpg') center/cover no-repeat; }
+    .bg5 { background: url('12.jpg') center/cover no-repeat; }
+
+    </style>
+</head>
+<body>
+
+      <!-- Button section -->
+      <div style="text-align: center; margin-top: 2rem;">
+         <a href="about.htm" target="_blank" class="cute-button">Know More About Me</a>
+      </div>
+
+      <a href="#" class="back-to-mainpage" title="Back to mainpage">
+      <i class="fas fa-arrow-up"></i>
+      </a>
+    
+    <div class="slideshow">
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+       <div></div>
+    </div>
+
+    <div class="content">
+      Welcome to Syaza's Website
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">NURSYAZA AMIRA</div>
+            <ul class=nav-links>
+                <li><a href="familyBackground.htm" target="_blank">Family Background</a></li>
+                <li><a href="skills.htm" target"_blank">Skills</a></li>
+                <li><a href="hobby.htm" target"_blank">Hobby</a></li>
+                <li><a href="achievements.htm" target"_blank">Achievements </a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="hero">
+    <div class="container">
+    <div class="hero-content">
+      <h1 style="font-size:250%;" >Hai, I'm <span class="highlight">Nursyaza Amira</span></h1>
+      <p class="typewriter">Student Diploma in Information Management</p>
+      <div class="social-icons" style="margin-top: 20px;">
+        <a href="mailto:nursyazamyra@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.instagram.com/syazamyaa" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@pandaanggelll" target="_blank"><i class="fab fa-tiktok"></i></a>
+      </div>
+     </div>
+    </div>
+    <div class="profile-pic">
+      <img src="me.jpg" alt="Your Photo">
+    </div>
+    </section>
+
+    <!--choose section-->
+    <h1 style="text-align: center;">
+       <span style="color:#9b0c0c;">Family</span> 
+       <span style="color:#dc6f6f;">Background</span>, 
+       <span style="color:#9b0c0c;">Skills</span>, 
+       <span style="color:#dc6f6f;">Hobby</span> & 
+       <span style="color:#9b0c0c;">Achievements</span>
+    </h1>
+    <p class="subtext">Click any box to know more about me</p>
+
+    <div class="grid">
+      <div class="card bg1">
+      <h2>About Me</h2>
+      <a href="about.htm">Click Here</a>
+    </div>
+    <div class="card bg2">
+      <h2>Family Background</h2>
+      <a href="familybackground.htm">Discover</a>
+    </div>
+    <div class="card bg3">
+      <h2>Skills</h2>
+      <a href="skills.htm">View More</a>
+    </div>
+    <div class="card bg4">
+      <h2>Hobby</h2>
+      <a href="hobby.htm">Explore</a>
+    </div>
+    <div class="card bg5">
+      <h2>Achievements</h2>
+      <a href="achievements.htm">Check Out</a>
+    </div>
+  </div>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 style="text-align:center; font-size:200%; color:#900C3F;" >Get in touch</h2>
+            <div class="contact-info">
+                <p style="text-align:center; font-size:100%; color:#900C3F;" >
+                  <strong> Want to chat? Just shoot me a DM </strong>
+                  <a href="https://www.instagram.com/syazamyaa" target="_blank">with a direct question on Instagram</a> 
+                  <strong> or </strong>
+                  <a href="mailto:nursyazamyra@gmail.com">drop me an email</a>, <strong> and I’ll reply as soon as I can. </strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div style="text-align: center; font-size:100%; color:#000000;">
+        <p>&copy; 2025 Nursyaza Amira binti Ahmad Ghazali. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

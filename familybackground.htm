@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Nursyaza Amira | Family Background </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+
+    .home-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #ff69b4;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .home-button a {
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .home-button:hover {
+      background-color: #ff3385;
+    }
+
+    .back-to-mainpage {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #ff69b4;
+      color: white;
+      padding: 12px 14px;
+      border-radius: 50%;
+      font-size: 18px;
+      text-align: center;
+      z-index: 1000;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      transition: background 0.3s ease;
+    }
+
+    .back-to-mainpage:hover {
+      background-color: #ff85c1;
+      text-decoration: none;
+}
+        
+        /* Basic Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Times New Roman, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #fefefe;
+            background-color: #e5dcd1;
+            padding-top: 60px;
+            animation: fadeIn 5s ease-in;
+            }
+ 
+         @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+         }
+        
+        .container {
+            width: 80%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #fff6eb;
+            color: black;
+            padding: 10px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 20px;
+        }
+        
+        .nav-links a {
+            color: black;
+            text-decoration: none;
+        }
+        
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        
+        section {
+            padding: 40px 0;
+        }
+        
+        h1 {
+            margin-bottom: 15px;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        footer {
+            background-color: #ffd3e3;
+            color: black;
+            text-align: center;
+            padding: 50px 0;
+            margin-top: 0px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .container {
+                width: 90%;
+            }
+        }
+        
+        .content {
+           position: center;
+           z-index: 1;
+           color: white;
+           text-align: center;
+           padding-top; 20%;
+           font-size: 400%;
+           text-shadow: 2px 2px 4px #000;
+        }
+ 
+          .slider {
+            display: flex;
+            animation: scroll 50s linear infinite;
+            width: fit-content;
+         }
+
+         .slider-container {
+            overflow: hidden;
+            width: 100%;
+            border-top: 3px solid #444;
+            border-bottom: 3px solid #444;
+          }
+
+          @keyframes scroll {
+            0% {
+              transform: translateX(0%);
+            }
+            100% {
+              transform: translateX(-50%);
+            }
+          }
+
+          .frame {
+             position: relative;
+             margin: 10px;
+             flex-shrink: 0;
+          }
+
+          .frame img {
+             width: 400px;
+             height: 400px;
+             object-fit: cover;
+             border: 2px solid white;
+             border-radius: 10px;
+           }
+
+          .info-box {
+             position: absolute;
+             bottom: 0;
+             left: 0;
+             right: 0;
+             background-color: rgba(0, 0, 0, 0.8);
+             color: white;
+             padding: 10px;
+             font-size: 30px;
+             opacity: 0;
+             transition: opacity 0.3s ease-in-out;
+             border-radius: 0 0 10px 10px;
+          }
+
+          .frame:hover .info-box {
+             opacity: 1;
+          }
+
+          .photo {
+             width: 300px;
+             height: 400px;
+             border: 8px solid #ffb6c1;
+             border-radius: 50% / 45%;
+             overflow: hidden;
+             box-shadow: 0 0 20px rgba(255, 182, 193, 0.5);
+             background: #fff;
+             flex-shrink: 0;
+          }          
+
+          .photo img {
+             width: 100%;
+             height: 100%;
+             object-fit: cover;
+          }
+
+ /* SLIDESHOW */
+    .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      height: 500px;
+      overflow: hidden;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.7;
+    }
+
+    .slide.active {
+      display: block;
+    }
+
+    /* TEXT AT CENTER OF SLIDE */
+    .text-overlay {
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: white;
+      text-shadow: 2px 2px 6px black;
+    }
+
+    .text-overlay h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .text-overlay p {
+      font-size: 18px;
+    }
+
+    </style>
+</head>
+<body>
+
+      <!-- Button section -->
+      <a href="#" class="back-to-mainpage" title="Back to mainpage">
+      <i class="fas fa-arrow-up"></i>
+      </a>
+
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">NURSYAZA AMIRA</div>
+            <ul class=nav-links>
+		<li><a href="about.htm" target="_blank">About</a></li>
+                <li><a href="familyBackground.htm" target="_blank">Family Background</a></li>
+                <li><a href="skills.htm" target"_blank">Skills</a></li>
+                <li><a href="hobby.htm" target"_blank">Hobby</a></li>
+                <li><a href="achievements.htm" target"_blank">Achievements </a></li>
+                <li><a href=" <li><a href="aboutNursyaza.htm" target"_blank">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Family Background Section -->
+<!-- SLIDESHOW -->
+  <div class="slideshow-container">
+    <div class="slide active">
+      <img src="6.jpg" alt="Family 1">
+    </div>
+    <div class="slide">
+      <img src="7.jpg" alt="Family 2">
+    </div>
+    <div class="slide">
+      <img src="8.jpg" alt="Family 3">
+    </div>
+    <div class="slide">
+      <img src="9.jpg" alt="Family 4">
+    </div>
+
+    <div class="text-overlay">
+      <h1>Syaza's Family Background</h1>
+      <p>This is about my family background.</p>
+    </div>
+  </div>
+
+  <!-- SLIDESHOW JAVASCRIPT -->
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlides() {
+      slides.forEach(slide => slide.classList.remove("active"));
+      slideIndex = (slideIndex + 1) % slides.length;
+      slides[slideIndex].classList.add("active");
+    }
+
+    setInterval(showSlides, 4000); 
+  </script>
+
+     <section id="familyBackground">
+        <div class="container">
+    <div class="slider-container">
+      <div class="slider">
+        <!-- Father -->
+        <div class="frame">
+           <img src="father.jpg" alt="Father">
+           <div class="info-box">My father's name is Ahmad Ghazali. He works as a van driver at Midori Foodstuffs and he was born in Alor Setar, Kedah.</div>
+        </div>
+        <!-- Mother -->
+      <div class="frame">
+        <img src="mother.jpg" alt="mother">
+        <div class="info-box">My mother's name is Normala. She is a assistant microbiologist, and she was born in Bagan Serai, Perak.</div>
+      </div>
+      <!-- Older Sister -->
+      <div class="frame">
+        <img src="oldersister.jpg" alt="Older Sister">
+        <div class="info-box">My eldest sister's name is Nur Syazwani. She works as a clerk at IPK Pulau Pinang, and she's the only one siblings who was married.</div>
+      </div>
+      <!-- Second Sister -->
+      <div class="frame">
+        <img src="2ndsister.jpg" alt="Second Sister">
+        <div class="info-box">My second sister's name is Nur Syamimi. She continue studies in PHD at UKM in material Sciences. She was born in Penang.</div>
+      </div>
+      <!-- Third Sister -->
+      <div class="frame">
+        <img src="3rdsister.jpg" alt="Third Sister">
+        <div class="info-box">My third sister's name is Nur Syafiqah. She works together with my mom as assistant microbiologist, and she was born in Penang.</div>
+      </div>
+
+      <!-- Repeat -->
+      <div class="frame">
+        <img src="me.jpg" alt="Me">
+        <div class="info-box">Hi! I'm Syaza.I am the youngest in my family and I was born in Penang.</div>
+      </div>
+      <div class="frame">
+        <img src="mother.jpg" alt="Mother's Picture">
+        <div class="info-box">My mother</div>
+      </div>
+      <div class="frame">
+        <img src="families.jpg" alt="Families Picture">
+        <div class="info-box">My Family</div>
+      </div>
+      <div class="frame">
+        <img src="family.jpg" alt="Family's Picture">
+        <div class="info-box">I love my Family :3 </div>
+      </div>
+      <div class="frame">
+        <img src="father.jpg" alt="Father">
+        <div class="info-box">My father's name is Ahmad Ghazali. He works as a van driver at Midori Foodstuffs and he was born in Alor Setar, Kedah.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<audio controls autoplay loop>
+  <source src="song.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+
+    <!-- Footer -->
+    <footer>
+        <div style="text-align: center; font-size:100%; color:#000000;">
+        <p>&copy; 2025 Nursyaza Amira binti Ahmad Ghazali. All Rights Reserved.</p>
+    </footer>
+    
+      <button class="home-button">
+        <a href="aboutNursyaza.htm"><i class="fas fa-home"></i></a>
+      </button>
+
+</body>
+</html>
